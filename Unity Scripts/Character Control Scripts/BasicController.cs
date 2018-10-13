@@ -11,9 +11,7 @@ public class BasicController : MonoBehaviour {
 
     public float mov_speed = 10.0f;
     public float jump_force = 10.0f;
-
-    public float fallMult = 2.5f;
-    public float lowJumpMult = 2f;
+    public float disToGround = 1.0f;
 
     // Update is called once per frame
     void FixedUpdate () {
@@ -22,7 +20,10 @@ public class BasicController : MonoBehaviour {
         transform.position += horizontal * Vector3.right * Time.deltaTime * mov_speed;
         transform.position += vertical * Vector3.forward * Time.deltaTime * mov_speed;
 
-        Jump();
+        if (isGrounded())
+        {
+            Jump();
+        }
     }
 
     void Jump()
@@ -31,21 +32,20 @@ public class BasicController : MonoBehaviour {
         if (Input.GetButtonDown("Jump"))
         {
             rb.velocity += Vector3.up * jump_force;
-
-            if (rb.velocity.y < 0)
-            {
-                rb.velocity += Vector3.up * Physics.gravity.y * (fallMult - 1) * Time.deltaTime;
-            }
-            else if (rb.velocity.y > 0 && !Input.GetButton("Jump"))
-            {
-                rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMult - 1) * Time.deltaTime;
-            }
-            else if (rb.velocity.y > 10)
-            {
-                rb.velocity += Vector3.up * Physics.gravity.y * (fallMult - 1) * Time.deltaTime;
-            }
         }
 
         
+    }
+
+    bool isGrounded()
+    {
+        bool raycast = Physics.Raycast(transform.position, Vector3.down, disToGround);
+
+        if(!raycast)
+        {
+            return false;
+        }
+
+        return true;
     }
 }
