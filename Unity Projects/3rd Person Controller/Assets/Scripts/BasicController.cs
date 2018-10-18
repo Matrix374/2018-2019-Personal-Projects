@@ -17,8 +17,8 @@ public class BasicController : MonoBehaviour {
     void FixedUpdate () {
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
-        transform.position += horizontal * Vector3.right * Time.deltaTime * mov_speed;
-        transform.position += vertical * Vector3.forward * Time.deltaTime * mov_speed;
+        transform.position += horizontal * Vector3.right * Time.unscaledDeltaTime * mov_speed;
+        transform.position += vertical * Vector3.forward * Time.unscaledDeltaTime * mov_speed;
 
         if (isGrounded())
         {

@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 23962514944088034}
   - component: {fileID: 136283183430815898}
   - component: {fileID: 54257040119052084}
-  - component: {fileID: 114955504930050268}
   - component: {fileID: 114736335743673846}
   m_Layer: 0
   m_Name: Player
@@ -115,20 +114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallMult: 2.5
   lowJumpMult: 2
---- !u!114 &114955504930050268
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1899566906173514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7719cfc6e68dca444971216a8a8f7dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 54257040119052084}
-  mov_speed: 10
-  jump_force: 10
 --- !u!136 &136283183430815898
 CapsuleCollider:
   m_ObjectHideFlags: 1
