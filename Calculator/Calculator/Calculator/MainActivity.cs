@@ -41,70 +41,34 @@ namespace Calculator
 
         private void AddNumberOrDecimalPoint(string value)
         {
-            //Currently only accepts 1 Digit Numbers, Index 0 is the first number, Index 1 is the second number
             int index = @operator == null ? 0 : 1;
-            
-            //Checks Number String for Decimal Points, Possible better way?
+
             if (value == "." && numbers[index].Contains("."))
                 return;
 
-            //Concats Value to String Array
             numbers[index] += value;
 
             UpdateCalculatorText();
         }
 
-        private void UpdateCalculatorText() => calculatorText.Text = $"{numbers[0]} {@operator} {numbers[1]}";
+        private void UpdateCalculatorText()
+        {
+            calculatorText.Text = $"{numbers[0]} {@opeator} {}"
+        }
 
         private void AddOperator(string value)
         {
-            if(numbers[1] != null)
-            {
-                Calculate(value);
-                return;
-            }
-
-            @operator = value;
-
-            UpdateCalculatorText();
+            throw new NotImplementedException();
         }
 
-        private void Calculate(string newOperator = null)
+        private void Calculate()
         {
-            double? result = null;
-            double? first = numbers[0] == null ? null : (double?)double.Parse(numbers[0]);
-            double? second = numbers[0] == null ? null : (double?)double.Parse(numbers[1]);
-
-            switch (@operator)
-            {
-                case "÷":
-                    result = first / second;
-                    break;
-                case "×":
-                    result = first * second;
-                    break;
-                case "+":
-                    result = first + second;
-                    break;
-                case "-":
-                    result = first - second;
-                    break;
-            }
-
-            if (result != null)
-            {
-                numbers[0] = result.ToString();
-                @operator = newOperator;
-                numbers[1] = null;
-                UpdateCalculatorText();
-            }
+            throw new NotImplementedException();
         }
 
         private void Erase()
         {
-            numbers[0] = numbers[1] = null;
-            @operator = null;
-            UpdateCalculatorText();
+            throw new NotImplementedException();
         }
 
     }

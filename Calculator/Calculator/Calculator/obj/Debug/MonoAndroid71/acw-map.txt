@@ -1,6 +1,3 @@
-Calculator.MainActivity, Calculator;md577e95df0f9606a34c8a54112cf06ca99.MainActivity
-Calculator.MainActivity;md577e95df0f9606a34c8a54112cf06ca99.MainActivity
-calculator.MainActivity;md577e95df0f9606a34c8a54112cf06ca99.MainActivity
 Android.Support.V4.Widget.SearchViewCompat+IOnCloseListenerImplementor, Xamarin.Android.Support.Compat;mono.android.support.v4.widget.SearchViewCompat_OnCloseListenerImplementor
 Android.Support.V4.Widget.SearchViewCompat.IOnCloseListenerImplementor;mono.android.support.v4.widget.SearchViewCompat_OnCloseListenerImplementor
 mono.android.support.v4.widget.SearchViewCompat_OnCloseListenerImplementor;mono.android.support.v4.widget.SearchViewCompat_OnCloseListenerImplementor
