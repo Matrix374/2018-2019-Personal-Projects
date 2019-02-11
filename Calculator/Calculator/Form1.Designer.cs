@@ -104,6 +104,7 @@
             this.minusButton.TabIndex = 9;
             this.minusButton.Text = "-";
             this.minusButton.UseVisualStyleBackColor = true;
+            this.minusButton.Click += new System.EventHandler(this.minusButton_Click);
             // 
             // num6
             // 
@@ -143,6 +144,7 @@
             this.plusButton.TabIndex = 13;
             this.plusButton.Text = "+";
             this.plusButton.UseVisualStyleBackColor = true;
+            this.plusButton.Click += new System.EventHandler(this.plusButton_Click);
             // 
             // num3
             // 
@@ -182,6 +184,7 @@
             this.multButton.TabIndex = 16;
             this.multButton.Text = "*";
             this.multButton.UseVisualStyleBackColor = true;
+            this.multButton.Click += new System.EventHandler(this.multButton_Click);
             // 
             // divButton
             // 
@@ -191,6 +194,7 @@
             this.divButton.TabIndex = 15;
             this.divButton.Text = "/";
             this.divButton.UseVisualStyleBackColor = true;
+            this.divButton.Click += new System.EventHandler(this.divButton_Click);
             // 
             // num0
             // 

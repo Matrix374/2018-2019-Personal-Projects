@@ -36,19 +36,6 @@ namespace Calculator
             UpdateCalculatorText();
         }
 
-        private void AddOperator(string value)
-        {
-            if (numbers[1] != null)
-            {
-                Calculate(value);
-                return;
-            }
-
-            @operator = value;
-
-            UpdateCalculatorText();
-        }
-
         private void Calculate(string newOperator = null)
         {
             double? result = null;
@@ -57,10 +44,10 @@ namespace Calculator
 
             switch (@operator)
             {
-                case "÷":
+                case "/":
                     result = first / second;
                     break;
-                case "×":
+                case "*":
                     result = first * second;
                     break;
                 case "+":
@@ -145,6 +132,58 @@ namespace Calculator
         private void decButton_Click(object sender, EventArgs e)
         {
             AddNumber(".");
+        }
+
+        private void divButton_Click(object sender, EventArgs e)
+        {
+            if (numbers[1] != null)
+            {
+                Calculate("/");
+                return;
+            }
+
+            @operator = "/";
+
+            UpdateCalculatorText();
+        }
+
+        private void multButton_Click(object sender, EventArgs e)
+        {
+            if (numbers[1] != null)
+            {
+                Calculate("*");
+                return;
+            }
+
+            @operator = "*";
+
+            UpdateCalculatorText();
+        }
+
+        private void plusButton_Click(object sender, EventArgs e)
+        {
+            if (numbers[1] != null)
+            {
+                Calculate("+");
+                return;
+            }
+
+            @operator = "+";
+
+            UpdateCalculatorText();
+        }
+
+        private void minusButton_Click(object sender, EventArgs e)
+        {
+            if (numbers[1] != null)
+            {
+                Calculate("-");
+                return;
+            }
+
+            @operator = "-";
+
+            UpdateCalculatorText();
         }
     }
 }
