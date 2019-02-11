@@ -3133,9 +3133,6 @@ namespace Calculator
 			// aapt resource value: 0x7F0800A5
 			public const int Animation_Design_BottomSheetDialog = 2131230885;
 			
-			// aapt resource value: 0x7F060002
-			public const int AppTheme = 2131099650;
-			
 			// aapt resource value: 0x7F0800A6
 			public const int Base_AlertDialog_AppCompat = 2131230886;
 			
@@ -3598,8 +3595,8 @@ namespace Calculator
 			// aapt resource value: 0x7F0800D2
 			public const int Base_Widget_Design_TabLayout = 2131230930;
 			
-			// aapt resource value: 0x7F060003
-			public const int button_calculator = 2131099651;
+			// aapt resource value: 0x7F060002
+			public const int button_calculator = 2131099650;
 			
 			// aapt resource value: 0x7F08001F
 			public const int Platform_AppCompat = 2131230751;

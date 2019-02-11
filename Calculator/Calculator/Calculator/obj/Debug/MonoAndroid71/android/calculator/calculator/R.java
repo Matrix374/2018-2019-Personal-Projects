@@ -3111,9 +3111,6 @@ containing a value of this type.
         public static final int Animation_AppCompat_Dialog=0x7f0a00a1;
         public static final int Animation_AppCompat_DropDownUp=0x7f0a00a2;
         public static final int Animation_Design_BottomSheetDialog=0x7f0a0161;
-        /**  Base application theme. 
-         */
-        public static final int AppTheme=0x7f0a017a;
         public static final int Base_AlertDialog_AppCompat=0x7f0a00a3;
         public static final int Base_AlertDialog_AppCompat_Light=0x7f0a00a4;
         public static final int Base_Animation_AppCompat_Dialog=0x7f0a00a5;
@@ -3487,7 +3484,7 @@ containing a value of this type.
         public static final int Widget_Design_Snackbar=0x7f0a0178;
         public static final int Widget_Design_TabLayout=0x7f0a015f;
         public static final int Widget_Design_TextInputLayout=0x7f0a0179;
-        public static final int button_calculator=0x7f0a017b;
+        public static final int button_calculator=0x7f0a017a;
     }
     public static final class styleable {
         /** Attributes that can be used with a ActionBar.

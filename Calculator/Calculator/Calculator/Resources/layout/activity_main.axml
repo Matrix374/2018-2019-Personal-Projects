@@ -30,8 +30,19 @@
 
 		<Button
             style="@styles/button_calculator"
-            app:layout_columnSpan="4"
+            android:text="(" />
+
+		<Button
+            style="@styles/button_calculator"
+            android:text=")" />
+
+		<Button
+            style="@styles/button_calculator"
             android:text="DEL" />
+
+		<Button
+            style="@styles/button_calculator"
+            android:text="C" />
         
 		<Button
             style="@styles/button_calculator"
