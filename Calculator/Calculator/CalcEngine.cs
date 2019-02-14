@@ -9,42 +9,44 @@ namespace Calculator
     class CalcEngine
     {
 
-        string[] numbers;
-        string @operator;
-        string calcText;
+        private string[] numbers;
+        private string @operator;
 
         public CalcEngine()
         {
-            numbers = new string[2];
-            @operator = null;
-            calcText = null;
+            Operator = null;
+            Numbers = new string[2];
         }
 
         public string[] Numbers { get => numbers; set => numbers = value; }
         public string Operator { get => @operator; set => @operator = value; }
-        public string CalcText { get => calcText; set => calcText = value; }
 
-        public void AddNumber(string value, ref string calcText)
+        public string Update()
+        {
+            return $"{Numbers[0]} {Operator} {Numbers[1]}";
+        }
+
+        public void AddNumber(string value)
         {
             int index = Operator == null ? 0 : 1;
 
             //Checks Number String for Decimal Points
-            if (value == "." && Numbers[index].Contains("."))
+            if (value == "." && numbers[index].Contains("."))
                 return;
 
             //Concats Value to String Array
             Numbers[index] += value;
 
-            calcText = $"{Numbers[0]} {Operator} {Numbers[1]}";
+            Update();
         }
 
-        public void Calculate(string newOperator, ref string calcText)
+        public void Calculate(string newOperator = null)
         {
             double? result = null;
-            double? first = Numbers[0] == null ? null : (double?)double.Parse(Numbers[0]);
-            double? second = Numbers[0] == null ? null : (double?)double.Parse(Numbers[1]);
+            double? first = Numbers[0] == null ? null : (double?)double.Parse(numbers[0]);
+            double? second = Numbers[0] == null ? null : (double?)double.Parse(numbers[1]);
 
-            switch (Operator)
+            switch (@operator)
             {
                 case "/":
                     result = first / second;
@@ -65,9 +67,15 @@ namespace Calculator
                 Numbers[0] = result.ToString();
                 Operator = newOperator;
                 Numbers[1] = null;
-
-                calcText = $"{Numbers[0]} {Operator} {Numbers[1]}";
+                Update();
             }
+        }
+
+        public void Delete()
+        {
+            Numbers[0] = Numbers[1] = null;
+            Operator = null;
+            Update();
         }
     }
 }

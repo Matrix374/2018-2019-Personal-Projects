@@ -20,133 +20,134 @@ namespace Calculator
         CalcEngine calc = new CalcEngine();
         string calcText;
 
-        void UpdateCalculatorText() => numBox.Text = calcText;
+        void UpdateCalculatorText() => numBox.Text = calc.Update();
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            calcText = null;
+            calc.Delete();
             UpdateCalculatorText();
         }
 
         private void calculateButton_Click(object sender, EventArgs e)
         {
             calc.Calculate();
+            UpdateCalculatorText();
         }
 
         private void num0_Click(object sender, EventArgs e)
         {
-            calc.AddNumber("0", ref calcText);
+            calc.AddNumber("0");
             UpdateCalculatorText();
         }
 
         private void num1_Click(object sender, EventArgs e)
         {
-            calc.AddNumber("1", ref calcText);
+            calc.AddNumber("1");
             UpdateCalculatorText();
         }
 
         private void num2_Click(object sender, EventArgs e)
         {
-           calc. AddNumber("2", ref calcText);
+           calc. AddNumber("2");
            UpdateCalculatorText();
         }
 
         private void num3_Click(object sender, EventArgs e)
         {
-            calc.AddNumber("3", ref calcText);
+            calc.AddNumber("3");
             UpdateCalculatorText();
         }
 
         private void num4_Click(object sender, EventArgs e)
         {
-            calc.AddNumber("4", ref calcText);
+            calc.AddNumber("4");
             UpdateCalculatorText();
         }
 
         private void num5_Click(object sender, EventArgs e)
         {
-            calc.AddNumber("5", ref calcText);
+            calc.AddNumber("5");
             UpdateCalculatorText();
         }
 
         private void num6_Click(object sender, EventArgs e)
         {
-            calc.AddNumber("6", ref calcText);
+            calc.AddNumber("6");
             UpdateCalculatorText();
         }
 
         private void num7_Click(object sender, EventArgs e)
         {
-            calc.AddNumber("7", ref calcText);
+            calc.AddNumber("7");
             UpdateCalculatorText();
         }
 
         private void num8_Click(object sender, EventArgs e)
         {
-            calc.AddNumber("8", ref calcText);
+            calc.AddNumber("8");
             UpdateCalculatorText();
         }
 
         private void num9_Click(object sender, EventArgs e)
         {
-            calc.AddNumber("9", ref calcText);
+            calc.AddNumber("9");
             UpdateCalculatorText();
         }
 
         private void decButton_Click(object sender, EventArgs e)
         {
-            calc.AddNumber(".", ref calcText);
+            calc.AddNumber(".");
             UpdateCalculatorText();
         }
 
         private void divButton_Click(object sender, EventArgs e)
         {
-            if (numbers[1] != null)
+            if (calc.Numbers[1] != null)
             {
-                calc.Calculate("/", ref calcText);
+                calc.Calculate("/");
                 return;
             }
 
-            @operator = "/";
+            calc.Operator = "/";
 
             UpdateCalculatorText();
         }
 
         private void multButton_Click(object sender, EventArgs e)
         {
-            if (numbers[1] != null)
+            if (calc.Numbers[1] != null)
             {
-                calc.Calculate("*", ref calcText);
+                calc.Calculate("*");
                 return;
             }
 
-            @operator = "*";
+            calc.Operator = "*";
 
             UpdateCalculatorText();
         }
 
         private void plusButton_Click(object sender, EventArgs e)
         {
-            if (numbers[1] != null)
+            if (calc.Numbers[1] != null)
             {
-                calc.Calculate("+", ref calcText);
+                calc.Calculate("+");
                 return;
             }
 
-            @operator = "+";
+            calc.Operator = "+";
 
             UpdateCalculatorText();
         }
 
         private void minusButton_Click(object sender, EventArgs e)
         {
-            if (numbers[1] != null)
+            if (calc.Numbers[1] != null)
             {
-                calc.Calculate("-", ref calcText);
+                calc.Calculate("-");
                 return;
             }
 
-            @operator = "-";
+            calc.Operator = "-";
 
             UpdateCalculatorText();
         }
